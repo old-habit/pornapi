@@ -19,6 +19,9 @@ app.use((req, res, next) => {
 });
 
 app.use("/pictures", pictureRoutes)
+app.get("/" , (req, res) => {
+  res.send("this is home page")
+})
 
 
 app.listen(process.env.PORT || 8000, () => {
