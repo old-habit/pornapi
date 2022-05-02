@@ -1,4 +1,3 @@
-const PORT = 8000;
 const express = require("express");
 const bodyParser = require('body-parser');
 const pictureRoutes = require("./routes/picturesRoute")
@@ -22,6 +21,6 @@ app.use((req, res, next) => {
 app.use("/pictures", pictureRoutes)
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log(`server running on port ${PORT}`);
 });
